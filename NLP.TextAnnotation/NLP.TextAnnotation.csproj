@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{3DF8C758-D471-45EF-8C7C-893A3C1008CA}</ProjectGuid>
+    <ProjectGuid>{5282D6B4-7490-4032-8671-748BBA21B2F2}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>NLP.PorterSample</RootNamespace>
-    <AssemblyName>NLP.PorterSample</AssemblyName>
+    <RootNamespace>NLP.TextAnnotation</RootNamespace>
+    <AssemblyName>NLP.TextAnnotation</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -41,6 +41,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Objects\Sentense.cs" />
+    <Compile Include="Objects\Text.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -48,15 +50,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="porterTest.txt">
+    <Content Include="textSample.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\NLP.Algorithms\NLP.Algorithms.csproj">
-      <Project>{075a10db-2369-417b-a5d6-06e5c1a862e2}</Project>
-      <Name>NLP.Algorithms</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

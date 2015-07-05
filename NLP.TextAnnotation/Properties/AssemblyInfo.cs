@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("NLP.Preprocessing")]
+[assembly: AssemblyTitle("NLP.TextAnnotation")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("NLP.Preprocessing")]
+[assembly: AssemblyProduct("NLP.TextAnnotation")]
 [assembly: AssemblyCopyright("Copyright ©  2015")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("5a1c4419-b631-4330-ac1e-1c60c704d81e")]
+[assembly: Guid("f5d17668-55b9-467c-a8f8-f135880422fb")]
 
 // Version information for an assembly consists of the following four values:
 //
