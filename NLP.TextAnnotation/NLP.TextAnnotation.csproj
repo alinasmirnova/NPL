@@ -43,6 +43,7 @@
   <ItemGroup>
     <Compile Include="Objects\Sentense.cs" />
     <Compile Include="Objects\Text.cs" />
+    <Compile Include="Objects\Word.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -53,6 +54,16 @@
     <Content Include="textSample.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\NLP.Algorithms\NLP.Algorithms.csproj">
+      <Project>{075a10db-2369-417b-a5d6-06e5c1a862e2}</Project>
+      <Name>NLP.Algorithms</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\NLP.Thesaurus\NLP.Thesaurus.csproj">
+      <Project>{2f5c308a-6215-4429-a788-c99d17282fb9}</Project>
+      <Name>NLP.Thesaurus</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

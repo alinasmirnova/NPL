@@ -4,6 +4,7 @@ using NLP.TextAnnotation.Objects;
 using System.IO;
 
 using System.Text.RegularExpressions;
+using NLP.Thesaurus.YARN;
 
 
 namespace NLP.TextAnnotation
@@ -19,11 +20,8 @@ namespace NLP.TextAnnotation
             var sentenses = text.GetSentenses();
 
             var words = text.GetWords();
-            foreach (var word in words)
-            {
-                Console.WriteLine(word);
-            }
-            Console.ReadLine();
+            var t = new ThesaurusOnline();
+            var m = t.Search("кот");
             //составляем тематические узлы
             //выделяем "главные" предложения
             //составляем аннотацию
