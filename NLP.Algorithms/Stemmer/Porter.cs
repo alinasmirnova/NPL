@@ -1,4 +1,6 @@
 ﻿using System;
+using System.IO;
+using System.Linq;
 using System.Text.RegularExpressions;
 
 
@@ -36,7 +38,13 @@ namespace NLP.Algorithms.Stemmer
         private static string pPattern = "ь$";
         private static string nnPattern = "нн$";
 
-        private static string utilityPattern = "(без|благодаря|в|вдоль|вместо|вне|вокруг|выше|для|до|за|из|из-за|из-под|к|кроме|между|мимо|на|над|о|от|перед|по|по-над|под|при|ради|с|сверху|сквозь|у|через|||||||||||||)";
+        private static string[] utilities;
+
+        static Porter()
+        {
+            utilities = File.ReadAllLines("utilities.txt").Where(s => !string.IsNullOrWhiteSpace(s)).ToArray();
+            
+        }
 
         public string Stem(string word, out PartOfSpeach partOfSpeach)
         {
@@ -44,6 +52,12 @@ namespace NLP.Algorithms.Stemmer
 
             //рекомендуется заменять ё на е перед началом работы, так как она редко употребляется
             var stemmed = Regex.Replace(word, "ё", "e");
+
+            if (utilities.Contains(stemmed))
+            {
+                partOfSpeach = PartOfSpeach.Utility;
+                return stemmed;
+            }
 
             //RV - часть слова после первой гласной или пустой строке, если в нем нет гласных
             var rv = Regex.Match(stemmed, rvPattern).Groups[2].Value;
