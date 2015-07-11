@@ -4,6 +4,7 @@ using System.Text.RegularExpressions;
 
 namespace NLP.Algorithms.Stemmer
 {
+    //todo + utility parts (from file?)
     public class Porter : IStemmer
     {
         private static string rvPattern = "([аеиоуыэюя])(.*)";
@@ -34,6 +35,8 @@ namespace NLP.Algorithms.Stemmer
         private static string iPattern = "и$";
         private static string pPattern = "ь$";
         private static string nnPattern = "нн$";
+
+        private static string utilityPattern = "(без|благодаря|в|вдоль|вместо|вне|вокруг|выше|для|до|за|из|из-за|из-под|к|кроме|между|мимо|на|над|о|от|перед|по|по-над|под|при|ради|с|сверху|сквозь|у|через|||||||||||||)";
 
         public string Stem(string word, out PartOfSpeach partOfSpeach)
         {

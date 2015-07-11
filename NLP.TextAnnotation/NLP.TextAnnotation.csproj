@@ -41,6 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Objects\LexicalChain.cs" />
     <Compile Include="Objects\Sentense.cs" />
     <Compile Include="Objects\Text.cs" />
     <Compile Include="Objects\Word.cs" />

@@ -17,12 +17,10 @@ namespace NLP.TextAnnotation
             var text = new Text(File.ReadAllText("textSample.txt"));
             
             //выделяем предложения
-            var sentenses = text.GetSentenses();
-
-            var words = text.GetWords();
-            var t = new ThesaurusOnline();
-            var m = t.Search("кот");
+            
             //составляем тематические узлы
+
+            var chains = text.GetLexicalChains(new ThesaurusOnline());
             //выделяем "главные" предложения
             //составляем аннотацию
 

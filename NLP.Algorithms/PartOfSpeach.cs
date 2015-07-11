@@ -7,6 +7,7 @@
         Verb = 2,
         PerfectGerund = 3,
         Participle = 4,
-        Unknown = 5
+        Unknown = 5,
+        Utility = 6
     }
 }

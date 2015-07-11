@@ -45,8 +45,9 @@
   <ItemGroup>
     <Compile Include="IThesaurus.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Synset.cs" />
+    <Compile Include="SynsetInfo.cs" />
     <Compile Include="WordInfo.cs" />
+    <Compile Include="YARN\Synset.cs" />
     <Compile Include="YARN\ThesaurusOnline.cs" />
     <Compile Include="YARN\Word.cs" />
   </ItemGroup>
